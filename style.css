@@ -31,6 +31,10 @@ nav {
   align-items: center;
 }
 
+nav img {
+  width: 200px;
+}
+
 .btn.btn-secondary {
   font-size: 16px;
   font-weight: 400;
@@ -57,8 +61,10 @@ header h1 {
   font-weight: 700;
   line-height: 72px;
   letter-spacing: 0px;
-  text-align: left;
+  text-align: center;
   margin-bottom: 25px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 header p {
@@ -91,6 +97,15 @@ header p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.stats .img-container {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.stats .img-container img {
+  width: 100%;
 }
 
 .stats .stats-container {
@@ -340,6 +355,11 @@ footer .contact div {
   border-radius: 5px;
 }
 
+form {
+  display: flex;
+  gap: 40px;
+}
+
 form button {
   padding: 12px 41px;
   color: white;
@@ -352,5 +372,80 @@ form button {
   border-radius: 5px;
   text-decoration: none;
   border: none;
-  margin-left: 40px;
+}
+
+@media only screen and (max-width: 1250px) {
+  .img-text {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+
+  footer .contact {
+    margin-top: 500px;
+  }
+
+  .stats .stats-container {
+    gap: 100px;
+  }
+
+  footer {
+    clip-path: none;
+    margin-top: 200px;
+    padding-top: 100px;
+  }
+
+  footer .contact {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  nav {
+    margin: 40px 30px;
+  }
+
+  header {
+    margin-top: 100px;
+  }
+
+  header p {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .stats .stats-container {
+    flex-direction: column;
+  }
+
+  .img-text {
+    flex-direction: column;
+  }
+
+  .img-text.flowing {
+    flex-direction: column-reverse;
+  }
+
+  .pre-footer h3 {
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: center;
+  }
+
+  form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav img {
+    width: 100px;
+  }
 }
